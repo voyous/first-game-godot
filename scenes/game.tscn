@@ -325,9 +325,6 @@ autoplay = "move"
 [node name="Coin8" parent="platforms/platform2" instance=ExtResource("4_lbhrr")]
 position = Vector2(0, -12)
 
-[node name="slime" parent="." instance=ExtResource("6_p57ef")]
-position = Vector2(760, -16)
-
 [node name="labels" type="Node" parent="."]
 
 [node name="Label2" type="Label" parent="labels"]
@@ -382,3 +379,6 @@ text = "Great work!"
 
 [node name="merchant" parent="." instance=ExtResource("10_vtaks")]
 position = Vector2(-104, 0)
+
+[node name="slime" parent="." instance=ExtResource("6_p57ef")]
+position = Vector2(760, -16)

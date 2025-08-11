@@ -4,6 +4,7 @@ var score = 0;
 var player_has_weapon = false;
 @onready var score_label: Label = $ScoreLabel;
 @onready var merchant_text_box: Label = $merchantTextBox
+@onready var slime: Node2D = $slime
 
 # Add 1 to score and update world text
 func add_point() -> void:

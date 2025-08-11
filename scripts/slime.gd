@@ -3,10 +3,15 @@ extends Node2D
 const SPEED = 60;
 
 var direction = 1;
+var health = 25;
 
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+func lower_health():
+	health -= 1;
+	print(health);
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -18,3 +23,6 @@ func _process(delta: float) -> void:
 		animated_sprite.flip_h = false;
 	
 	position.x += direction * SPEED * delta;
+	
+	if health == 0:
+		queue_free();
