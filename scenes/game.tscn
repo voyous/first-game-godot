@@ -319,10 +319,10 @@ position = Vector2(760, -16)
 [node name="labels" type="Node" parent="."]
 
 [node name="Label2" type="Label" parent="labels"]
-offset_left = -120.0
-offset_top = -55.0
-offset_right = 52.0
-offset_bottom = -7.0
+offset_left = 19.0
+offset_top = -76.0
+offset_right = 191.0
+offset_bottom = -28.0
 theme_override_colors/font_color = Color(0.356863, 0.52549, 0.737255, 1)
 theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 8
@@ -370,3 +370,13 @@ text = "Great work!"
 
 [node name="merchant" parent="." instance=ExtResource("10_vtaks")]
 position = Vector2(-104, 0)
+
+[node name="merchantTextBox" type="Label" parent="merchant"]
+offset_left = -57.0
+offset_top = -44.0
+offset_right = 154.0
+offset_bottom = -21.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Weapons for sale!"
