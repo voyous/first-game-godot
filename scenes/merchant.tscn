@@ -49,7 +49,7 @@ script = ExtResource("1_12ke4")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_krsg3")
 autoplay = "default"
-frame_progress = 0.782344
+frame_progress = 0.797616
 
 [node name="Timer" type="Timer" parent="."]
 
