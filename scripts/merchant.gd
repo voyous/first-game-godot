@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 			elif game_manager.check_weapon_is_enabled():
 				game_manager.update_merch_text("I'm not made of swords bro.");
 			else:
-				game_manager.update_merch_text("Here's your sword, don't cut yourself haha.");
+				game_manager.update_merch_text("Here's your sword, don't cut yourself haha. \n Press X to attack...");
 				game_manager.enable_weapon();
 				print(game_manager.check_weapon_is_enabled());
 			

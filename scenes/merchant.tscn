@@ -49,12 +49,11 @@ script = ExtResource("1_12ke4")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_krsg3")
 autoplay = "default"
-frame_progress = 0.645208
+frame_progress = 0.643073
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -11)
