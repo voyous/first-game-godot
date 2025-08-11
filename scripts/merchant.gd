@@ -29,6 +29,13 @@ func _process(delta: float) -> void:
 			timer.stop();
 			if game_manager.check_score() < 13:
 				game_manager.update_merch_text("I'm sorry, you need " + str(13 - game_manager.check_score()) + " more coins.");
+				print(game_manager.check_weapon_is_enabled());
+			elif game_manager.check_weapon_is_enabled():
+				game_manager.update_merch_text("I'm not made of swords bro.");
+			else:
+				game_manager.update_merch_text("Here's your sword, don't cut yourself haha.");
+				game_manager.enable_weapon();
+				print(game_manager.check_weapon_is_enabled());
 			
 			animated_sprite.stop();
 
