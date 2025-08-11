@@ -6,6 +6,7 @@ extends Node2D
 
 var rand = RandomNumberGenerator.new();
 var is_talking = false;
+var is_colliding = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,10 +20,20 @@ func _on_timer_timeout() -> void:
 		
 	timer.start(rand.randf_range(0.5, 3));
 
+func _process(delta: float) -> void:
+	if is_colliding:
+		pass;
+	else:
+		pass;
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	merchant_text_box.text = "Press E to interact.";
+	timer.stop();
+	is_colliding = true;
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	merchant_text_box.text = "Weapons for sale!";
+	timer.start();
+	is_colliding = false;
