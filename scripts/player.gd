@@ -10,6 +10,7 @@ var currentDirection = 0;
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_sound: AudioStreamPlayer2D = $jumpSound
 @onready var attack_sound: AudioStreamPlayer2D = $attackSound
+@onready var game_manager: Node = %GameManager
 
 func die():
 	is_dead = true;
@@ -40,10 +41,11 @@ func _physics_process(delta: float) -> void:
 	# Get input direction: -1, 0, 1
 	var direction := Input.get_axis("move_left", "move_right")
 	
-	# Creates attack instance infront of character
+	# Creates attack instance infront of character if weapon is enabled
 	if Input.is_action_just_pressed("attack"):
-		createAttack();
-		attack_sound.play();
+		if game_manager.check_weapon_is_enabled():
+			createAttack();
+			attack_sound.play();
 	
 	# Flips the sprite:
 	if direction > 0:
